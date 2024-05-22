@@ -3,5 +3,78 @@
 {% block title %}Home{% endblock %}
 
 {% block main %}
+<span> What to eat today ?</span>
+<section class="order-interface">
+    <div class="order-parameters">
+        <form>
+            <label for="cuisine">Choose your preferred cuisine(s) if any:</label><br>
+            <input type="checkbox" name="cuisine" value="african"> 🌍 African<br>
+            <input type="checkbox" name="cuisine" value="chinese"> 🇨🇳 Chinese<br>
+            <input type="checkbox" name="cuisine" value="japanese"> 🇯🇵 Japanese<br>
+            <input type="checkbox" name="cuisine" value="korean"> 🇰🇷 Korean<br>
+            <input type="checkbox" name="cuisine" value="vietnamese"> 🇻🇳 Vietnamese<br>
+            <input type="checkbox" name="cuisine" value="thai"> 🇹🇭 Thai<br>
+            <input type="checkbox" name="cuisine" value="indian"> 🇮🇳 Indian<br>
+            <input type="checkbox" name="cuisine" value="british"> 🇬🇧 British<br>
+            <input type="checkbox" name="cuisine" value="irish"> 🇮🇪 Irish<br>
+            <input type="checkbox" name="cuisine" value="french"> 🇫🇷 French<br>
+            <input type="checkbox" name="cuisine" value="italian"> 🇮🇹 Italian<br>
+            <input type="checkbox" name="cuisine" value="mexican"> 🇲🇽 Mexican<br>
+            <input type="checkbox" name="cuisine" value="spanish"> 🇪🇸 Spanish<br>
+            <input type="checkbox" name="cuisine" value="middle_eastern"> Middle Eastern<br>
+            <input type="checkbox" name="cuisine" value="jewish"> Jewish<br>
+            <input type="checkbox" name="cuisine" value="american"> 🇺🇸 American<br>
+            <input type="checkbox" name="cuisine" value="cajun"> Cajun<br>
+            <input type="checkbox" name="cuisine" value="southern"> Southern<br>
+            <input type="checkbox" name="cuisine" value="greek"> 🇬🇷 Greek<br>
+            <input type="checkbox" name="cuisine" value="german"> 🇩🇪 German<br>
+            <input type="checkbox" name="cuisine" value="nordic"> 🇳🇴 Nordic<br>
+            <input type="checkbox" name="cuisine" value="eastern_european"> Eastern European<br>
+            <input type="checkbox" name="cuisine" value="caribbean"> Caribbean<br>
+            <input type="checkbox" name="cuisine" value="latin_american"> 🌎 Latin American<br>
 
+            <label for="type">Choose the type of dish:</label><br>
+            <select name="type">
+                <option value="main course">Main Course</option>
+                <option value="side dish">Side Dish</option>
+                <option value="dessert">Dessert</option>
+                <option value="appetizer">Appetizer</option>
+                <option value="salad">Salad</option>
+                <option value="bread">Bread</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="soup">Soup</option>
+                <option value="beverage">Beverage</option>
+                <option value="sauce">Sauce</option>
+                <option value="drink">Drink</option>
+            </select>
+
+            <label for="diet">Choose your diet if any:</label><br>
+            <input type="checkbox" name="diet" value="pescetarian"> 🐟 Pescetarian<br>
+            <input type="checkbox" name="diet" value="lacto_vegetarian"> 🥛 Lacto Vegetarian<br>
+            <input type="checkbox" name="diet" value="ovo_vegetarian"> 🥚 Ovo Vegetarian<br>
+            <input type="checkbox" name="diet" value="vegan"> 🌱 Vegan<br>
+            <input type="checkbox" name="diet" value="paleo"> 🦖 Paleo<br>
+            <input type="checkbox" name="diet" value="primal"> Primal<br>
+            <input type="checkbox" name="diet" value="vegetarian"> 🥕 Vegetarian<br>
+
+            <label for="intolerances">Choose your intolerances if any:</label><br>
+            <input type="checkbox" name="intolerances" value="dairy"> 🥛 Dairy<br>
+            <input type="checkbox" name="intolerances" value="egg"> 🥚 Egg<br>
+            <input type="checkbox" name="intolerances" value="gluten"> 🌾 Gluten<br>
+            <input type="checkbox" name="intolerances" value="peanut"> 🥜 Peanut<br>
+            <input type="checkbox" name="intolerances" value="sesame"> Sesame<br>
+            <input type="checkbox" name="intolerances" value="seafood"> 🦞 Seafood<br>
+            <input type="checkbox" name="intolerances" value="shellfish"> 🦐 Shellfish<br>
+            <input type="checkbox" name="intolerances" value="soy"> Soy<br>
+            <input type="checkbox" name="intolerances" value="sulfite"> Sulfite<br>
+            <input type="checkbox" name="intolerances" value="tree_nut"> 🌰 Tree Nut<br>
+            <input type="checkbox" name="intolerances" value="wheat"> 🌾 Wheat<br>
+
+            <textarea name="query" placeholder="Enter the type of meal you would like to have" required></textarea>
+        </form>
+    </div>
+    <div class="generated-meal">
+        <textarea></textarea>
+    </div>
+</section>
 {% endblock %}
