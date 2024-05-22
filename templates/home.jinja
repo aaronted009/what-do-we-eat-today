@@ -6,7 +6,7 @@
 <span> What to eat today ?</span>
 <section class="order-interface">
     <div class="order-parameters">
-        <form>
+        <form method="POST">
             <label for="cuisine">Choose your preferred cuisine(s) if any:</label><br>
             <input type="checkbox" name="cuisine" value="african"> 🌍 African<br>
             <input type="checkbox" name="cuisine" value="chinese"> 🇨🇳 Chinese<br>
@@ -71,6 +71,8 @@
             <input type="checkbox" name="intolerances" value="wheat"> 🌾 Wheat<br>
 
             <textarea name="query" placeholder="Enter the type of meal you would like to have" required></textarea>
+            
+            <input type="submit" value="Submit">
         </form>
     </div>
     <div class="generated-meal">
