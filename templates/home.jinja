@@ -7,70 +7,82 @@
 <section class="order-interface">
     <div class="order-parameters">
         <form>
-            <label for="cuisine">Choose your preferred cuisine(s) if any:</label><br>
-            <input type="checkbox" name="cuisine" value="african"> 🌍 African<br>
-            <input type="checkbox" name="cuisine" value="chinese"> 🇨🇳 Chinese<br>
-            <input type="checkbox" name="cuisine" value="japanese"> 🇯🇵 Japanese<br>
-            <input type="checkbox" name="cuisine" value="korean"> 🇰🇷 Korean<br>
-            <input type="checkbox" name="cuisine" value="vietnamese"> 🇻🇳 Vietnamese<br>
-            <input type="checkbox" name="cuisine" value="thai"> 🇹🇭 Thai<br>
-            <input type="checkbox" name="cuisine" value="indian"> 🇮🇳 Indian<br>
-            <input type="checkbox" name="cuisine" value="british"> 🇬🇧 British<br>
-            <input type="checkbox" name="cuisine" value="irish"> 🇮🇪 Irish<br>
-            <input type="checkbox" name="cuisine" value="french"> 🇫🇷 French<br>
-            <input type="checkbox" name="cuisine" value="italian"> 🇮🇹 Italian<br>
-            <input type="checkbox" name="cuisine" value="mexican"> 🇲🇽 Mexican<br>
-            <input type="checkbox" name="cuisine" value="spanish"> 🇪🇸 Spanish<br>
-            <input type="checkbox" name="cuisine" value="middle_eastern"> Middle Eastern<br>
-            <input type="checkbox" name="cuisine" value="jewish"> Jewish<br>
-            <input type="checkbox" name="cuisine" value="american"> 🇺🇸 American<br>
-            <input type="checkbox" name="cuisine" value="cajun"> Cajun<br>
-            <input type="checkbox" name="cuisine" value="southern"> Southern<br>
-            <input type="checkbox" name="cuisine" value="greek"> 🇬🇷 Greek<br>
-            <input type="checkbox" name="cuisine" value="german"> 🇩🇪 German<br>
-            <input type="checkbox" name="cuisine" value="nordic"> 🇳🇴 Nordic<br>
-            <input type="checkbox" name="cuisine" value="eastern_european"> Eastern European<br>
-            <input type="checkbox" name="cuisine" value="caribbean"> Caribbean<br>
-            <input type="checkbox" name="cuisine" value="latin_american"> 🌎 Latin American<br>
+            <label for="cuisineType">Choose your preferred cuisine(s) if any:</label><br>
+            <input type="checkbox" name="cuisineType" value="American"> 🇺🇸 American<br>
+            <input type="checkbox" name="cuisineType" value="Asian"> 🌏 Asian<br>
+            <input type="checkbox" name="cuisineType" value="British"> 🇬🇧 British<br>
+            <input type="checkbox" name="cuisineType" value="Caribbean"> 🌴 Caribbean<br>
+            <input type="checkbox" name="cuisineType" value="Central Europe"> 🇪🇺 Central Europe<br>
+            <input type="checkbox" name="cuisineType" value="Chinese"> 🇨🇳 Chinese<br>
+            <input type="checkbox" name="cuisineType" value="Eastern Europe"> 🇪🇺 Eastern Europe<br>
+            <input type="checkbox" name="cuisineType" value="French"> 🇫🇷 French<br>
+            <input type="checkbox" name="cuisineType" value="Indian"> 🇮🇳 Indian<br>
+            <input type="checkbox" name="cuisineType" value="Italian"> 🇮🇹 Italian<br>
+            <input type="checkbox" name="cuisineType" value="Japanese"> 🇯🇵 Japanese<br>
+            <input type="checkbox" name="cuisineType" value="Kosher"> 🕍 Kosher<br>
+            <input type="checkbox" name="cuisineType" value="Mediterranean"> 🌊 Mediterranean<br>
+            <input type="checkbox" name="cuisineType" value="Mexican"> 🇲🇽 Mexican<br>
+            <input type="checkbox" name="cuisineType" value="Middle Eastern"> 🌍 Middle Eastern<br>
+            <input type="checkbox" name="cuisineType" value="Nordic"> ❄️ Nordic<br>
+            <input type="checkbox" name="cuisineType" value="South American"> 🌎 South American<br>
+            <input type="checkbox" name="cuisineType" value="South East Asian"> 🌏 South East Asian<br>
 
-            <label for="type">Choose the type of dish:</label><br>
-            <select name="type">
-                <option value="main course">Main Course</option>
-                <option value="side dish">Side Dish</option>
-                <option value="dessert">Dessert</option>
-                <option value="appetizer">Appetizer</option>
-                <option value="salad">Salad</option>
-                <option value="bread">Bread</option>
-                <option value="breakfast">Breakfast</option>
-                <option value="soup">Soup</option>
-                <option value="beverage">Beverage</option>
-                <option value="sauce">Sauce</option>
-                <option value="drink">Drink</option>
+            <label for="mealType">Choose the type of meal:</label><br>
+            <select name="mealType">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Snack">Snack</option>
+                <option value="Teatime">Teatime</option>
             </select>
 
             <label for="diet">Choose your diet if any:</label><br>
-            <input type="checkbox" name="diet" value="pescetarian"> 🐟 Pescetarian<br>
-            <input type="checkbox" name="diet" value="lacto_vegetarian"> 🥛 Lacto Vegetarian<br>
-            <input type="checkbox" name="diet" value="ovo_vegetarian"> 🥚 Ovo Vegetarian<br>
-            <input type="checkbox" name="diet" value="vegan"> 🌱 Vegan<br>
-            <input type="checkbox" name="diet" value="paleo"> 🦖 Paleo<br>
-            <input type="checkbox" name="diet" value="primal"> Primal<br>
-            <input type="checkbox" name="diet" value="vegetarian"> 🥕 Vegetarian<br>
+            <input type="checkbox" name="diet" value="balanced"> 🌿 Balanced<br>
+            <input type="checkbox" name="diet" value="high-fiber"> 🌾 High Fiber<br>
+            <input type="checkbox" name="diet" value="high-protein"> 🥩 High Protein<br>
+            <input type="checkbox" name="diet" value="low-carb"> 🥦 Low Carb<br>
+            <input type="checkbox" name="diet" value="low-fat"> 🍎 Low Fat<br>
+            <input type="checkbox" name="diet" value="low-sodium"> 🧂 Low Sodium<br>
 
-            <label for="intolerances">Choose your intolerances if any:</label><br>
-            <input type="checkbox" name="intolerances" value="dairy"> 🥛 Dairy<br>
-            <input type="checkbox" name="intolerances" value="egg"> 🥚 Egg<br>
-            <input type="checkbox" name="intolerances" value="gluten"> 🌾 Gluten<br>
-            <input type="checkbox" name="intolerances" value="peanut"> 🥜 Peanut<br>
-            <input type="checkbox" name="intolerances" value="sesame"> Sesame<br>
-            <input type="checkbox" name="intolerances" value="seafood"> 🦞 Seafood<br>
-            <input type="checkbox" name="intolerances" value="shellfish"> 🦐 Shellfish<br>
-            <input type="checkbox" name="intolerances" value="soy"> Soy<br>
-            <input type="checkbox" name="intolerances" value="sulfite"> Sulfite<br>
-            <input type="checkbox" name="intolerances" value="tree_nut"> 🌰 Tree Nut<br>
-            <input type="checkbox" name="intolerances" value="wheat"> 🌾 Wheat<br>
+            <label for="health">Choose your health preferences if any:</label><br>
+            <input type="checkbox" name="health" value="alcohol-cocktail"> 🍹 Alcohol Cocktail<br>
+            <input type="checkbox" name="health" value="alcohol-free"> 🚱 Alcohol Free<br>
+            <input type="checkbox" name="health" value="celery-free"> 🌱 Celery Free<br>
+            <input type="checkbox" name="health" value="crustacean-free"> 🦀 Crustacean Free<br>
+            <input type="checkbox" name="health" value="dairy-free"> 🥛 Dairy Free<br>
+            <input type="checkbox" name="health" value="DASH"> DASH<br>
+            <input type="checkbox" name="health" value="egg-free"> 🥚 Egg Free<br>
+            <input type="checkbox" name="health" value="fish-free"> 🐟 Fish Free<br>
+            <input type="checkbox" name="health" value="fodmap-free"> FODMAP Free<br>
+            <input type="checkbox" name="health" value="gluten-free"> 🌾 Gluten Free<br>
+            <input type="checkbox" name="health" value="immuno-supportive"> Immuno Supportive<br>
+            <input type="checkbox" name="health" value="keto-friendly"> Keto Friendly<br>
+            <input type="checkbox" name="health" value="kidney-friendly"> Kidney Friendly<br>
+            <input type="checkbox" name="health" value="kosher"> 🕍 Kosher<br>
+            <input type="checkbox" name="health" value="low-fat-abs"> Low Fat Abs<br>
+            <input type="checkbox" name="health" value="low-potassium"> Low Potassium<br>
+            <input type="checkbox" name="health" value="low-sugar"> Low Sugar<br>
+            <input type="checkbox" name="health" value="lupine-free"> Lupine Free<br>
+            <input type="checkbox" name="health" value="Mediterranean"> 🌊 Mediterranean<br>
+            <input type="checkbox" name="health" value="mollusk-free"> Mollusk Free<br>
+            <input type="checkbox" name="health" value="mustard-free"> Mustard Free<br>
+            <input type="checkbox" name="health" value="no-oil-added"> No Oil Added<br>
+            <input type="checkbox" name="health" value="paleo"> 🦴 Paleo<br>
+            <input type="checkbox" name="health" value="peanut-free"> 🥜 Peanut Free<br>
+            <input type="checkbox" name="health" value="pescatarian"> Pescatarian<br>
+            <input type="checkbox" name="health" value="pork-free"> Pork Free<br>
+            <input type="checkbox" name="health" value="red-meat-free"> Red Meat Free<br>
+            <input type="checkbox" name="health" value="sesame-free"> Sesame Free<br>
+            <input type="checkbox" name="health" value="shellfish-free"> Shellfish Free<br>
+            <input type="checkbox" name="health" value="soy-free"> Soy Free<br>
+            <input type="checkbox" name="health" value="sugar-conscious"> Sugar Conscious<br>
+            <input type="checkbox" name="health" value="sulfite-free"> Sulfite Free<br>
+            <input type="checkbox" name="health" value="tree-nut-free"> 🌰 Tree Nut Free<br>
+            <input type="checkbox" name="health" value="vegan"> 🌱 Vegan<br>
+            <input type="checkbox" name="health" value="vegetarian"> 🥕 Vegetarian<br>
+            <input type="checkbox" name="health" value="wheat-free"> 🌾 Wheat Free<br>
 
-            <textarea name="query" placeholder="Enter the type of meal you would like to have" required></textarea>
+            <textarea name="q" placeholder="Enter the type of meal you would like to have" required></textarea>
         </form>
     </div>
     <div class="generated-meal">
