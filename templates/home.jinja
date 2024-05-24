@@ -6,7 +6,7 @@
 <span> What to eat today ?</span>
 <section class="order-interface">
     <div class="order-parameters">
-        <form method="POST">
+        <form method="POST" id="order-form">
             <label for="cuisineType">Choose your preferred cuisine(s) if any:</label><br>
             <input type="checkbox" name="cuisineType" value="american"> 🇺🇸 American<br>
             <input type="checkbox" name="cuisineType" value="asian"> 🌏 Asian<br>
@@ -29,7 +29,7 @@
             <input type="checkbox" name="cuisineType" value="world"> 🌍 World<br>
 
             <label for="mealType">Choose the type of meal:</label><br>
-            <select name="mealType">
+            <select name="mealType" id="mealType">
                 <option value="breakfast">Breakfast</option>
                 <option value="brunch">Brunch</option>
                 <option value="dinner">Dinner</option>
@@ -83,7 +83,7 @@
             <input type="checkbox" name="health" value="vegetarian"> 🥕 Vegetarian<br>
             <input type="checkbox" name="health" value="wheat-free"> 🌾 Wheat Free<br>
 
-            <textarea name="q" placeholder="Enter the type of meal you would like to have" required></textarea>
+            <textarea name="q" id="q" placeholder="Enter the type of meal you would like to have" required></textarea>
             
             <input type="submit" value="Submit">
         </form>
