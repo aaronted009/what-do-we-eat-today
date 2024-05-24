@@ -47,7 +47,7 @@ async def generate_meal_recipe(request: Request, order: Order) -> Response:
     
     # Retrieve one of the recipes randomly
     number_of_returned_recipes: int = recipes_data["count"] # Get the returned number of recipes
-    random_recipe_index = random.randint(0, number_of_returned_recipes) # Get randomly one of the recipes
+    random_recipe_index = random.randint(0, number_of_returned_recipes-1) # Get randomly one of the recipes
     random_recipe = recipes_data["hits"][random_recipe_index]["recipe"]
 
     return templates.TemplateResponse("home.jinja", {"request": request, "recipe": random_recipe})
