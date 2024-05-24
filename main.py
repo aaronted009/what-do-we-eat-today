@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 import os
 import requests
 import logging
-from pprint import pprint
 import random
 
 load_dotenv()
