@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 import os
 import requests
 import logging
+from pprint import pprint
+import random
 
 load_dotenv()
 
@@ -42,5 +44,11 @@ async def generate_meal_recipe(request: Request, order: Order) -> Response:
         response = requests.get(url=search_recipes_url, params=params)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-    print(f"response: {response}")
-    return templates.TemplateResponse("home.jinja", {"request": request})
+    recipes_data = response.json()
+    
+    # Retrieve one of the recipes randomly
+    number_of_returned_recipes: int = recipes_data["count"] # Get the returned number of recipes
+    random_recipe_index = random.randint(0, number_of_returned_recipes) # Get randomly one of the recipes
+    random_recipe = recipes_data["hits"][random_recipe_index]["recipe"]
+
+    return templates.TemplateResponse("home.jinja", {"request": request, "recipe": random_recipe})
