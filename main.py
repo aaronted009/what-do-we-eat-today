@@ -5,6 +5,7 @@ from models import Order
 from dotenv import load_dotenv
 import os
 import requests
+import logging
 
 load_dotenv()
 
@@ -40,6 +41,6 @@ async def generate_meal_recipe(request: Request, order: Order) -> Response:
     try:
         response = requests.get(url=search_recipes_url, params=params)
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
     print(f"response: {response}")
     return templates.TemplateResponse("home.jinja", {"request": request})
