@@ -46,7 +46,7 @@ async def generate_meal_recipe(request: Request, order: Order) -> Response:
     recipes_data = response.json()
     
     # Retrieve one of the recipes randomly
-    number_of_returned_recipes: int = recipes_data["count"] # Get the returned number of recipes
+    number_of_returned_recipes = len(recipes_data["hits"]) # Get the returned number of recipes
     random_recipe_index = random.randint(0, number_of_returned_recipes-1) # Get randomly one of the recipes
     random_recipe = recipes_data["hits"][random_recipe_index]["recipe"]
 
