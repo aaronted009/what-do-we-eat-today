@@ -7,7 +7,7 @@
 <h1 class="title"> What to eat today ?</h1>
 <section class="order-interface">
     <div class="order-parameters">
-        <form method="POST" id="order-form">
+        <form method="POST" action="/" id="order-form">
             <div class="parameters">
                 <div class="form-group parameters-grid">
                     <div class="parameter">
@@ -106,7 +106,9 @@
         </form>
     </div>
     <div class="generated-meal">
-        
+        {% if recipe %}
+            {{recipe}}
+        {% endif %}
     </div>
 </section>
 </main>
