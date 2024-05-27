@@ -7,7 +7,7 @@
 <h1 class="title"> What to eat today ?</h1>
 <section class="order-interface">
     <div class="order-parameters">
-        <form method="POST" action="/" id="order-form">
+        <form method="POST" action="{{ url_for('generate_meal_recipe')}}" id="order-form">
             <div class="parameters">
                 <div class="form-group parameters-grid">
                     <div class="parameter">
