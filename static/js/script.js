@@ -42,6 +42,10 @@ document
             .then((data) => {
                 console.log(data);
                 document.getElementById("order-form").reset(); // Reset the form
+                // Update the whole page with the new data
+                document.open();
+                document.write(data);
+                document.close();
             })
             .catch((error) => console.error("Error:", error));
     });
