@@ -116,8 +116,10 @@
 
             <h3>Instructions :</h3>
             Please, for instructions, check our source <a href="{{ recipe['url'] }}" target="_blank">here</a>
-        {% else %}
+        {% elif request.method == 'POST' %}
             <h2 class="recipe-title">Sorry, no recipe found for your request. Please, try again later.</h2>
+        {% else %}
+            <h2 class="recipe-title">Please, fill the form to get a recipe.</h2>
         {% endif %}
     </div>
 </section>
