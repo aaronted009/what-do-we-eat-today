@@ -107,7 +107,15 @@
     </div>
     <div class="generated-meal">
         {% if recipe %}
-            {{recipe}}
+            <h2 class="recipe-title">{{ recipe['label'] }}</h2>
+            <img id="recipe-image" src="{{ recipe['image'] }}" alt="Recipe Image">
+            <h3>Ingredients:</h3>
+            {% for ingredient in recipe['ingredients']  %}
+                <span>{{ ingredient['text'] }}</span> <br>
+            {% endfor %}
+
+            <h3>Instructions :</h3>
+            Please, for instructions, check our source <a href="{{ recipe['url'] }}" target="_blank">here</a>
         {% endif %}
     </div>
 </section>
