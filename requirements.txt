@@ -1,2 +1,9 @@
+# Web framework : FastAPI
 fastapi
+
+# Packages
 requests
+httpx
+
+# Testing
+pytest
