@@ -59,17 +59,15 @@ async def generate_meal_recipe(
         response = requests.get(url=search_recipes_url, params=params)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-    recipes_data = response.json()
-
-    # Retrieve one of the recipes randomly
-    number_of_returned_recipes = len(
-        recipes_data["hits"]
-    )  # Get the returned number of recipes
-    random_recipe_index = random.randint(
-        0, number_of_returned_recipes - 1
-    )  # Get randomly one of the recipes
-    random_recipe = recipes_data["hits"][random_recipe_index]["recipe"]
-
+        
+    if response:
+        recipes_data = response.json()
+        # Retrieve one of the recipes randomly
+        number_of_returned_recipes = len(recipes_data["hits"])  # Get the returned number of recipes
+        if number_of_returned_recipes:
+            random_recipe_index = random.randint(0, number_of_returned_recipes - 1)
+            random_recipe = recipes_data["hits"][random_recipe_index]["recipe"]  # Get randomly one of the recipes
+    random_recipe = None
     return templates.TemplateResponse(
         "home.jinja", {"request": request, "recipe": random_recipe}
     )
